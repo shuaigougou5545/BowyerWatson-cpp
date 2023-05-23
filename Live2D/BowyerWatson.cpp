@@ -175,7 +175,7 @@ void BowyerWatson::interpolation()
         if(triangle[0] <= 3 || triangle[1] <= 3 || triangle[2] <= 3)
             continue;
         
-        // TODO:debug
+        // TODO: debug
         auto cc = store_circle_centers[i];
         addPoint(cc);
     }
