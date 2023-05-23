@@ -29,10 +29,19 @@ int main()
     Mat img = Mat::zeros(Size(width,height), CV_8UC3);
     img.setTo(255);
     
-    bw.show(& img);
+    bw.show(&img);
     imshow("window", img);
     setMouseCallback("window",onMouse,reinterpret_cast<void*>(&img));
     
-    waitKey();
+    while(1){
+        auto key = waitKey();
+        if(key == 'i'){
+            bw.interpolation();
+            bw.show(&img);
+            imshow("window", img);
+        }
+            
+    }
+    
     return 0;
 }

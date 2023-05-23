@@ -28,6 +28,7 @@ public:
     void show(void* param);
     void drawLine(Vector2f p1, Vector2f p2);
     void calcTriangleInfo(int i1, int i2, int i3, float& radius, Vector2f& circle_center);
+    void interpolation();
 };
 
 #endif /* BowyerWatson_hpp */

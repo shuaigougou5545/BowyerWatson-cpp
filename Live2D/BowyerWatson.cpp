@@ -164,3 +164,19 @@ void BowyerWatson::calcTriangleInfo(int i1, int i2, int i3, float& radius, Vecto
     auto p1 = points[i1];
     radius = (circle_center-p1).norm();
 }
+
+void BowyerWatson::interpolation()
+{
+    auto store_circle_centers = circle_centers;
+    auto store_triangles = triangles;
+    for(int i = 0; i < (int)store_circle_centers.size(); i++)
+    {
+        auto triangle = store_triangles[i];
+        if(triangle[0] <= 3 || triangle[1] <= 3 || triangle[2] <= 3)
+            continue;
+        
+        // TODO:debug
+        auto cc = store_circle_centers[i];
+        addPoint(cc);
+    }
+}
