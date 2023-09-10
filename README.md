@@ -1,4 +1,4 @@
-# Bowyer Watson Algorithm - cpp
+# Bowyer Watson Algorithm - cpp [unfinished~]
 
 ###### using：OpenCV & Eigen
 
